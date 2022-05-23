@@ -4,20 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Star Wars Trivia</title>
-    <link rel="stylesheet" href="/assets/style.css">
-    
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Star Wars Trivia Quiz</title>
 </head>
 <body>
-<div class="container">
-    <div id="home" class="flex-column flex-center">
-        <h1>Padawon, are you ready to put your knowledge to the test?</h1>
-        <a href="/game.html" class ="btn">Play</a>
-        <a href="/highscores.html" id="highscore-btn"
-        class="btn">High Scores</a>
-      
-    </div>
-</div>
+    <main>
+        <header>
+            <div>
+                <div class="score-btn">
+                    <a href="highscore.html"><button>Your Scores</button></a>
+                </div>
+                <div class="timer">
+                    <div class="count-down">Time: 30 s</div>
+                </div>
+            </div>
+        </header>
 
+        <div class="quiz-info">
+            <h1> STAR WARS TRIVIA </h1>
+            <h3> PADAWON,  THIS TEST WILL PROVE IF YOU ARE READY TO BECOME A JEDI.  CONCENTRATE AND LET THE FORCE FLOW THROUGH YOU.</h3>
+            <div class="rule-container">
+                <h3> Quiz Rules: </h3>
+                <ol>
+                    <li class="rules" >You have 30 seconds to answer 4 questions.</li>
+                    <li class="rules" >If you answer a question incorrectly, 10 seconds will be taken off the clock.</li>
+                </ol>
+            </div>    
+        </div>
+       
+        
+        <div class="btn">
+            <button id="start">Test Your Knowledge</button>
+        </div>
+
+         <!-- Quiz Box -->
+         <div id="container">
+             <h1 class="question-title"><h1>
+             <div class="answer-choices"></div>
+        </div>
+        <div id="flex"> 
+            <div class="answer-status" class="hide-status"> </div>
+            <div id="score"></div>
+        </div>
+        
+         
+         <!--Result Box-->
+         <div class="hide" id="result-page">
+             <h1> SCOREBOARD </h1>
+             <div>
+                <h4>Your Score Is: <span id="final-score"></span></h4>
+                <p>
+                    <input type="text" id="initials-el" placeholder="Enter Initials">
+                    <button id="submit">Submit</button>
+                </p>
+             </div>
+         </div>
+         
+    </main>
+    <script src="assets/index.js"></script>
 </body>
 </html>
