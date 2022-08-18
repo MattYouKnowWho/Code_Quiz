@@ -119,8 +119,11 @@ function showQuestions(){
             margin: 0 0 15px 5rem;
             padding: 9px;
             font-size: 17px;
-            border-radius: 30px
+            border-radius: 30px;
+            border-shadow: 2px 2px #999;  
+            transform: translateY(4px);
             `;
+            answerChoices.classList.add("answer");
             choices.append(answerChoices);
 
             //Checking answers clicked 
@@ -215,10 +218,10 @@ function startTimer () {
     countDown = setInterval(function(){
         counter--;
         timeEl.textContent = 'Time left: ' + counter + ' S';
-        // if (counter <= 0){ 
-        //     timeEl.textContent = "GAME OVER";
-        //     gameOver();
-        // }
+        if (counter <= 0){ 
+            timeEl.textContent = "GAME OVER";
+            gameOver();
+        }
 
     }, 1000);
 }

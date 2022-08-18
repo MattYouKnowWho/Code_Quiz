@@ -84,12 +84,28 @@ header div {
     justify-content: center;
     margin-bottom: 50px;
 }
-
+#start:hover {
+background-color: rgb(209, 209, 230);
+}
+#start:active {
+    background-color: rgb(212, 223, 112);
+    box-shadow: 0 5px;
+    transform: translateY(4px);
+}
+.answer:hover {
+    background-color:rgb(209, 209, 230);
+    }
+.answer:active {
+        background-color:rgb(212, 223, 112);
+        box-shadow: 0 5px;
+        transform: translateY(4px);
+    }
 #start {
     padding: 15px;
     font-size: 25x;
     font-weight: bold;
     border-radius: 30px;
+    box-shadow: 0 2px #999;
 }
 
 #container {
