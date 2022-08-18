@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-
+   
 }
 
 header {
@@ -24,7 +24,7 @@ header div {
 
 .timer {
     border: 1px solid;
-    background: rgb(128, 162, 254);
+    background: rgb(220, 106, 106);
     color: rgb(1, 1, 1);
     display: flex;
     align-items: center;
@@ -85,15 +85,16 @@ header div {
 }
 
 .answer-choices {
-    display: flex;
-    margin: 0 0 15px 5rem;
-    padding: 9px;
+    display: inline-grid;
+    margin: 4px 197px 24px 4rem;
+    padding: 35px;
     font-size: 17px;
 }
 
 #flex {
     display: flex;
     justify-content: space-around;
+
 }
 
 #result-page {

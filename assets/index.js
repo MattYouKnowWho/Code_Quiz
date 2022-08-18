@@ -114,7 +114,7 @@ function showQuestions(){
         var answerChoices = document.createElement('button');
             answerChoices.textContent = answer;
             answerChoices.style.cssText = `
-            display: flex;
+            display: justify-content;
             text-align: center;
             margin: 0 0 15px 5rem;
             padding: 9px;
@@ -214,10 +214,10 @@ function startTimer () {
     countDown = setInterval(function(){
         counter--;
         timeEl.textContent = 'Time left: ' + counter + ' S';
-        if (counter <= 0){ 
-            timeEl.textContent = "GAME OVER";
-            gameOver();
-        }
+        // if (counter <= 0){ 
+        //     timeEl.textContent = "GAME OVER";
+        //     gameOver();
+        // }
 
     }, 1000);
 }
