@@ -119,6 +119,7 @@ function showQuestions(){
             margin: 0 0 15px 5rem;
             padding: 9px;
             font-size: 17px;
+            border-radius: 30px
             `;
             choices.append(answerChoices);
 
