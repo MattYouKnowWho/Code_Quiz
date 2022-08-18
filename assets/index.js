@@ -14,6 +14,7 @@ var score = document.getElementById('score');
 var finalScore = document.getElementById('final-score');
 var initialsEL = document.getElementById('initials-el'); //initials input by user
 var scoreInput = document.querySelector('.score-input');
+var score = 0;
 
 var currentQuestionIndex = 0;//tracking current question 
 var answerStatus= "";
@@ -63,7 +64,7 @@ var myQuestions = [
             "C: Jettster",
             "D: Mace-Windu"
         ],
-        answer: "A: Anakin Skywalker"
+        correctAnswer: "A: Anakin Skywalker"
 
 
 
@@ -153,16 +154,20 @@ function showQuestions(){
 
 //if answer correct
 function answerCorrect() {
+    score ++
 
     answerStatus.textContent = "Correct!";
-
+    
 }
 
 //if answer wrong
 function answerWrong() {
-    
+
     //subtract 10secs from clock
     counter -= 10;
+    if (counter < 0) {
+        counter = 0;
+    }
     answerStatus.textContent = "Wrong!";
    
    
@@ -176,7 +181,7 @@ function gameOver() {
     showResultPage();
     
     var getFinalScore = counter;
-    finalScore.textContent = getFinalScore;
+    finalScore.textContent = score;
 }
 
 
@@ -217,12 +222,12 @@ var countDown;
 function startTimer () {
     countDown = setInterval(function(){
         counter--;
-        timeEl.textContent = 'Time left: ' + counter + ' S';
         if (counter <= 0){ 
+            counter = 0
             timeEl.textContent = "GAME OVER";
             gameOver();
         }
-
+        timeEl.textContent = 'Time left: ' + counter + ' S';
     }, 1000);
 }
 //add buttons events here
